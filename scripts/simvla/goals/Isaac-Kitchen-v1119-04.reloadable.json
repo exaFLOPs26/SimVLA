@@ -1,0 +1,22 @@
+{
+    "goals": [
+        [
+            {
+                "language": "Go to mug",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/mug0",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        1.1313602924346924,
+                        -1.573508620262146,
+                        0.0
+                    ]
+                ]
+            }
+        ]
+    ]
+}

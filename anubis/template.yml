@@ -1,0 +1,111 @@
+# The robot description defines the generalized coordinates and how to map those
+# to the underlying URDF dofs.
+
+api_version: 1.0
+
+# Defines the generalized coordinates. Each generalized coordinate is assumed
+# to have an entry in the URDF.
+# Lula will only use these joints to control the robot position.
+cspace:
+    - OmniFL
+    - OmniFR
+    - OmniR
+    - arm1_base_link_joint
+    - arm2_base_link_joint
+    - link11_joint
+    - link21_joint
+    - link12_joint
+    - link22_joint
+    - link13_joint
+    - link23_joint
+    - link14_joint
+    - link24_joint
+    - link15_joint
+    - link25_joint
+    - gripper1R_joint
+    - gripper1_joint
+    - gripper2R_joint
+    - gripper2_joint
+default_q: [
+    0.0,0.0042,0.0,-0.0953,0.1841,0.0069,0.0298,-0.0289,-0.0733,0.1229,0.2096,-0.2527,0.4274,0.1112,-0.2117,0.04,0.0,0.0,0.04
+]
+
+acceleration_limits: [
+   10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
+]
+
+jerk_limits: [
+   10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000
+]
+
+# Most dimensions of the cspace have a direct corresponding element
+# in the URDF. This list of rules defines how unspecified coordinates
+# should be extracted or how values in the URDF should be overwritten.
+
+cspace_to_urdf_rules:
+    - {name: OmniFL_roller_0_joint, rule: fixed, value: -0.0018}
+    - {name: OmniFL_roller_10_joint, rule: fixed, value: 0.0018}
+    - {name: OmniFL_roller_11_joint, rule: fixed, value: 0.0017}
+    - {name: OmniFL_roller_12_joint, rule: fixed, value: 0.0015}
+    - {name: OmniFL_roller_13_joint, rule: fixed, value: 0.001}
+    - {name: OmniFL_roller_14_joint, rule: fixed, value: 0.0005}
+    - {name: OmniFL_roller_15_joint, rule: fixed, value: 0.0032}
+    - {name: OmniFL_roller_16_joint, rule: fixed, value: -0.0006}
+    - {name: OmniFL_roller_17_joint, rule: fixed, value: -0.0011}
+    - {name: OmniFL_roller_18_joint, rule: fixed, value: -0.0015}
+    - {name: OmniFL_roller_19_joint, rule: fixed, value: -0.0018}
+    - {name: OmniFL_roller_1_joint, rule: fixed, value: -0.0017}
+    - {name: OmniFL_roller_2_joint, rule: fixed, value: -0.0015}
+    - {name: OmniFL_roller_3_joint, rule: fixed, value: -0.001}
+    - {name: OmniFL_roller_4_joint, rule: fixed, value: -0.0005}
+    - {name: OmniFL_roller_5_joint, rule: fixed, value: 0.0}
+    - {name: OmniFL_roller_6_joint, rule: fixed, value: 0.0006}
+    - {name: OmniFL_roller_7_joint, rule: fixed, value: 0.0011}
+    - {name: OmniFL_roller_8_joint, rule: fixed, value: 0.0015}
+    - {name: OmniFL_roller_9_joint, rule: fixed, value: 0.0018}
+    - {name: OmniFR_roller_0_joint, rule: fixed, value: -0.0018}
+    - {name: OmniFR_roller_10_joint, rule: fixed, value: 0.0018}
+    - {name: OmniFR_roller_11_joint, rule: fixed, value: 0.0018}
+    - {name: OmniFR_roller_12_joint, rule: fixed, value: 0.0015}
+    - {name: OmniFR_roller_13_joint, rule: fixed, value: 0.0011}
+    - {name: OmniFR_roller_14_joint, rule: fixed, value: 0.0006}
+    - {name: OmniFR_roller_15_joint, rule: fixed, value: 0.0019}
+    - {name: OmniFR_roller_16_joint, rule: fixed, value: -0.0006}
+    - {name: OmniFR_roller_17_joint, rule: fixed, value: -0.0011}
+    - {name: OmniFR_roller_18_joint, rule: fixed, value: -0.0015}
+    - {name: OmniFR_roller_19_joint, rule: fixed, value: -0.0017}
+    - {name: OmniFR_roller_1_joint, rule: fixed, value: -0.0018}
+    - {name: OmniFR_roller_2_joint, rule: fixed, value: -0.0015}
+    - {name: OmniFR_roller_3_joint, rule: fixed, value: -0.0011}
+    - {name: OmniFR_roller_4_joint, rule: fixed, value: -0.0006}
+    - {name: OmniFR_roller_5_joint, rule: fixed, value: -0.0}
+    - {name: OmniFR_roller_6_joint, rule: fixed, value: 0.0006}
+    - {name: OmniFR_roller_7_joint, rule: fixed, value: 0.0011}
+    - {name: OmniFR_roller_8_joint, rule: fixed, value: 0.0015}
+    - {name: OmniFR_roller_9_joint, rule: fixed, value: 0.0017}
+    - {name: OmniR_roller_0_joint, rule: fixed, value: -0.0018}
+    - {name: OmniR_roller_10_joint, rule: fixed, value: 0.0018}
+    - {name: OmniR_roller_11_joint, rule: fixed, value: 0.0018}
+    - {name: OmniR_roller_12_joint, rule: fixed, value: 0.0015}
+    - {name: OmniR_roller_13_joint, rule: fixed, value: 0.0011}
+    - {name: OmniR_roller_14_joint, rule: fixed, value: 0.0006}
+    - {name: OmniR_roller_15_joint, rule: fixed, value: -0.0054}
+    - {name: OmniR_roller_16_joint, rule: fixed, value: -0.0006}
+    - {name: OmniR_roller_17_joint, rule: fixed, value: -0.0011}
+    - {name: OmniR_roller_18_joint, rule: fixed, value: -0.0015}
+    - {name: OmniR_roller_19_joint, rule: fixed, value: -0.0017}
+    - {name: OmniR_roller_1_joint, rule: fixed, value: -0.0018}
+    - {name: OmniR_roller_2_joint, rule: fixed, value: -0.0015}
+    - {name: OmniR_roller_3_joint, rule: fixed, value: -0.0011}
+    - {name: OmniR_roller_4_joint, rule: fixed, value: -0.0006}
+    - {name: OmniR_roller_5_joint, rule: fixed, value: -0.0}
+    - {name: OmniR_roller_6_joint, rule: fixed, value: 0.0006}
+    - {name: OmniR_roller_7_joint, rule: fixed, value: 0.0011}
+    - {name: OmniR_roller_8_joint, rule: fixed, value: 0.0015}
+    - {name: OmniR_roller_9_joint, rule: fixed, value: 0.0017}
+
+# Lula uses collision spheres to define the robot geometry in order to avoid
+# collisions with external obstacles.  If no spheres are specified, Lula will
+# not be able to avoid obstacles.
+
+collision_spheres:

@@ -1,0 +1,38 @@
+{
+    "goals": [
+        [
+            {
+                "language": "Move",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/base_cabinet",
+                    "which_arm": "Both"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        0.8875714540481567,
+                        -1.6263225078582764,
+                        0.0
+                    ]
+                ]
+            },
+            {
+                "language": "Move",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/sink_cabinet",
+                    "which_arm": "Both"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        0.7593798041343689,
+                        -0.7133846282958984,
+                        1.5707963705062866
+                    ]
+                ]
+            }
+        ]
+    ]
+}

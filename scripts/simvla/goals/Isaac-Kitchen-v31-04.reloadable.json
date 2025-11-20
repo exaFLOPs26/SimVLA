@@ -1,0 +1,131 @@
+{
+    "goals": [
+        [
+            {
+                "language": "Move to bottle",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/bottle0",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        0.7585213780403137,
+                        -1.907068133354187,
+                        -1.5707963705062866
+                    ]
+                ]
+            },
+            {
+                "language": "Move arm to bottle",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to grasp",
+                    "prim_path": "/world/bottle0"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        [
+                            0.8806260228157043,
+                            -2.247757911682129,
+                            1.0553243160247803,
+                            0.6019859313964844,
+                            0.7234589457511902,
+                            -0.1210700049996376,
+                            0.31553471088409424
+                        ],
+                        [
+                            0.8996406197547913,
+                            -2.231558322906494,
+                            1.032716989517212,
+                            -0.6067189574241638,
+                            -0.16431963443756104,
+                            0.7652254700660706,
+                            0.1390005350112915
+                        ]
+                    ]
+                ]
+            },
+            {
+                "language": "Grasp bottle",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": true
+                },
+                "processed_goal": [
+                    "G_r",
+                    true
+                ]
+            },
+            {
+                "language": "Reset to original position",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to reset",
+                    "prim_path": ""
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        999.0,
+                        0.0,
+                        1.102,
+                        0.6322,
+                        -0.587,
+                        0.3344,
+                        -0.3793
+                    ]
+                ]
+            },
+            {
+                "language": "Move to sink",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/sink_cabinet",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        0.5706862807273865,
+                        -0.6907008290290833,
+                        1.5707963705062866
+                    ]
+                ]
+            },
+            {
+                "language": "Move arm to sink",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to place",
+                    "prim_path": "/world/sink_cabinet/corpus/sink"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        0.7206863164901733,
+                        -0.23270085453987122,
+                        1.066179633140564,
+                        999.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ]
+            },
+            {
+                "language": "Release",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": false
+                },
+                "processed_goal": [
+                    "G_r",
+                    false
+                ]
+            }
+        ]
+    ]
+}

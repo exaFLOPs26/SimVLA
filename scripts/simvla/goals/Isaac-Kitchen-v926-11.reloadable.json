@@ -1,0 +1,120 @@
+{
+    "goals": [
+        [
+            {
+                "language": "Go to mug",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/mug0",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        1.0478951930999756,
+                        0.7492115497589111,
+                        -1.5707963705062866
+                    ]
+                ]
+            },
+            {
+                "language": "Move arm to grasp mug",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to grasp",
+                    "prim_path": "/world/mug0"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        0.614096999168396,
+                        -2.2687909603118896,
+                        1.0018329620361328,
+                        -0.5091406106948853,
+                        0.18646174669265747,
+                        0.8382593989372253,
+                        -0.05769790709018707
+                    ]
+                ]
+            },
+            {
+                "language": "Grasp mug",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": true
+                },
+                "processed_goal": [
+                    "G_r",
+                    true
+                ]
+            },
+            {
+                "language": "Reset to original position",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to reset",
+                    "prim_path": ""
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        999.0,
+                        0.0,
+                        1.102,
+                        0.6322,
+                        -0.587,
+                        0.3344,
+                        -0.3793
+                    ]
+                ]
+            },
+            {
+                "language": "Move to sink",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/sink_cabinet",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        0.8952791690826416,
+                        -2.390836477279663,
+                        -1.5707963705062866
+                    ]
+                ]
+            },
+            {
+                "language": "Place mug",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to place",
+                    "prim_path": "/world/sink_cabinet/corpus/sink"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        1.0452792644500732,
+                        -2.4388365745544434,
+                        1.0693104267120361,
+                        999.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ]
+            },
+            {
+                "language": "Release",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": false
+                },
+                "processed_goal": [
+                    "G_r",
+                    false
+                ]
+            }
+        ]
+    ]
+}

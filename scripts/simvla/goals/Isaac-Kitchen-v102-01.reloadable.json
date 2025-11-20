@@ -1,0 +1,91 @@
+{
+    "goals": [
+        [
+            {
+                "language": "Move to bottle",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/bottle0",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        1.0073304176330566,
+                        -0.5332653522491455,
+                        0.0
+                    ]
+                ]
+            },
+            {
+                "language": "arm to bottle",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to grasp",
+                    "prim_path": "/world/bottle0"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        [
+                            1.5450419187545776,
+                            -0.4640921950340271,
+                            0.9941402673721313,
+                            0.6899016499519348,
+                            0.668668270111084,
+                            0.2303658425807953,
+                            0.15443465113639832
+                        ]
+                    ]
+                ]
+            },
+            {
+                "language": "grasp",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": true
+                },
+                "processed_goal": [
+                    "G_r",
+                    true
+                ]
+            },
+            {
+                "language": "Reset to original position",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to reset",
+                    "prim_path": ""
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        999.0,
+                        0.0,
+                        1.102,
+                        0.6322,
+                        -0.587,
+                        0.3344,
+                        -0.3793
+                    ]
+                ]
+            },
+            {
+                "language": "Move to sink",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/sink_cabinet",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        1.0028835535049438,
+                        -2.2309834957122803,
+                        -1.5707963705062866
+                    ]
+                ]
+            }
+        ]
+    ]
+}

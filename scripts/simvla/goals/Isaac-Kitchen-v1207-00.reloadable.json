@@ -1,0 +1,151 @@
+{
+    "goals": [
+        [
+            {
+                "language": "Move to bottle",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/bottle0",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        0.7476309537887573,
+                        -1.3247331380844116,
+                        0.0
+                    ]
+                ]
+            },
+            {
+                "language": "Move arm to bottle",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to grasp",
+                    "prim_path": "/world/bottle0"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        [
+                            1.1315973997116089,
+                            -1.2752138376235962,
+                            0.9649648666381836,
+                            0.369432270526886,
+                            0.361437052488327,
+                            0.600479245185852,
+                            0.6101702451705933
+                        ],
+                        [
+                            1.135140061378479,
+                            -1.2622898817062378,
+                            1.1270121335983276,
+                            0.5119251608848572,
+                            -0.5712037086486816,
+                            0.4788784384727478,
+                            -0.4270062744617462
+                        ]
+                    ]
+                ]
+            },
+            {
+                "language": "Grasp bottle",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": true
+                },
+                "processed_goal": [
+                    "G_r",
+                    true
+                ]
+            },
+            {
+                "language": "Reset to original position",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to reset",
+                    "prim_path": ""
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        999.0,
+                        0.0,
+                        1.102,
+                        0.6322,
+                        -0.587,
+                        0.3344,
+                        -0.3793
+                    ]
+                ]
+            },
+            {
+                "language": "Move to sink",
+                "action": "N",
+                "parameters": {
+                    "prim_path": "/world/sink_cabinet",
+                    "which_arm": "Right"
+                },
+                "processed_goal": [
+                    "N",
+                    [
+                        -0.05000000074505806,
+                        -0.7400667667388916,
+                        1.5707963705062866
+                    ]
+                ]
+            },
+            {
+                "language": "Move arm to sink",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to place",
+                    "prim_path": "/world/sink_cabinet/corpus/sink"
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        0.0,
+                        -0.21206679940223694,
+                        1.0510936975479126,
+                        999.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ]
+            },
+            {
+                "language": "Release",
+                "action": "G_r",
+                "parameters": {
+                    "grasp": false
+                },
+                "processed_goal": [
+                    "G_r",
+                    false
+                ]
+            },
+            {
+                "language": "Reset to original position",
+                "action": "A_r",
+                "parameters": {
+                    "usage": "Move arm to reset",
+                    "prim_path": ""
+                },
+                "processed_goal": [
+                    "A_r",
+                    [
+                        999.0,
+                        0.0,
+                        1.102,
+                        0.6322,
+                        -0.587,
+                        0.3344,
+                        -0.3793
+                    ]
+                ]
+            }
+        ]
+    ]
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="anubis_right_h">
+  <joint name="ee_fixed_joint1" type="fixed">
+    <origin xyz="-0.095 -0.2897669 1.6984168" rpy="0.0001404 0.1745329 -1.5699878"/>
+    <parent link="gripper_base_link"/>
+    <child link="ee_link1"/>
+  </joint>
+  <joint name="gripper1R_joint" type="prismatic">
+    <origin xyz="-0.095 -0.2655326 1.5609771" rpy="0.0001404 0.1745329 -1.5699878"/>
+    <parent link="gripper_base_link"/>
+    <child link="gripper1R"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="0." upper="0.04" effort="4." velocity="4.8000002"/>
+  </joint>
+  <joint name="gripper1_joint" type="prismatic">
+    <origin xyz="-0.095 -0.2655326 1.5609771" rpy="-0.0001404 -0.1745329 1.5716048"/>
+    <parent link="gripper_base_link"/>
+    <child link="gripper1L"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="0." upper="0.04" effort="4." velocity="4.8000002"/>
+  </joint>
+  <link name="gripper_base_link">
+    <visual>
+      <origin xyz="-0.095 -0.2655326 1.5609771" rpy="0.0001404 0.1745329 -1.5699878"/>
+      <geometry>
+        <mesh filename="meshes/anubis_omni_gripper_base_link_visuals_gripper_base_link_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.095 -0.2655326 1.5609771" rpy="0.0001404 0.1745329 -1.5699878"/>
+      <geometry>
+        <mesh filename="meshes/anubis_omni_gripper_base_link_collisions_gripper_base_link_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="ee_link1"/>
+  <link name="gripper1L">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.35"/>
+      <inertia ixx="0.000347" ixy="0." ixz="0." iyy="0.000561" iyz="0." izz="0.000771"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="meshes/fingerL_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.00861 -0.0005 0.11054" rpy="0. 0. -3.1415927"/>
+      <geometry>
+        <box size="0.018 0.035 0.093"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="gripper1R">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.35"/>
+      <inertia ixx="0.000347" ixy="0." ixz="0." iyy="0.000561" iyz="0." izz="0.000771"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="meshes/fingerR_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.01061 0.0005 0.11054" rpy="0. 0. 0."/>
+      <geometry>
+        <box size="0.018 0.035 0.093"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

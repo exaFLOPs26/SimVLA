@@ -28,18 +28,20 @@ In short, SimVLA is meant to train VLA using simulation data. For having simulat
    conda activate env_isaaclab
    ```
 4. Generate kitchen USD
+   
    <img width="602" height="499" alt="image" src="https://github.com/user-attachments/assets/8f89423f-0b80-45e6-8046-45c3d686b048" />
 
    ```bash
    ./isaaclab.sh -p scripts/simvla/kitchen_scene_generator.py
    ```
-5. Goal generator
+6. Goal generator
+   
    <img width="760" height="532" alt="image" src="https://github.com/user-attachments/assets/967f824e-3083-4074-bb5e-09c1ec53bde8" />
 
    ```bash
    ./isaaclab.sh -p scripts/simvla/goal_generator.py
    ```
-6. Demo generate
+7. Demo generate
    ```bash
    ./isaaclab.sh -p scripts/simvla/generate.py \
 	--task Isaac-Kitchen-v1103-00 \
@@ -52,7 +54,7 @@ In short, SimVLA is meant to train VLA using simulation data. For having simulat
 	--task_type NavManipulation \
 	--task_language "Put bottle to sink"
    ```
-7. Demo replay
+8. Demo replay
    ```bash
    ./isaaclab.sh -p scripts/simvla/demo_replay.py \
 	--task Isaac-Kitchen-v1103-00 \
@@ -61,7 +63,7 @@ In short, SimVLA is meant to train VLA using simulation data. For having simulat
 	--headless \
 	--task_type NavManipulation
    ```
-8. LeRobot Training
+9. LeRobot Training
    ```bash
    lerobot-train \
      --dataset.repo_id={repo_id} \
@@ -75,7 +77,7 @@ In short, SimVLA is meant to train VLA using simulation data. For having simulat
      --batch_size=8 \
      --wandb.disable_artifact=True
    ```
-9. LeRobot evaluation in IsaacLab
+10. LeRobot evaluation in IsaacLab
    ```bash
    ./isaaclab.sh -p scripts/simvla/async_eval.py \
 	--task Isaac-Kitchen-v1103-00 \
